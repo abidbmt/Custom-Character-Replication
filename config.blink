@@ -13,8 +13,7 @@ event ClientToServer {
     type: Reliable,
     call: ManyAsync,
 	data: struct {
-		position: vector<f64>,
-		rotation: vector<f64>,
+		cframe: CFrame<f16, f16>
 	}
 }
 
@@ -24,7 +23,6 @@ event ServerToClient {
     call: ManyAsync,
 	data: struct {
 		player: Instance(Player),
-		position: vector<f64>,
-		rotation: vector<f64>,
+		cframe: CFrame<f16, f16>,
 	}
 }

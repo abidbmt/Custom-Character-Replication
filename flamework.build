@@ -8,7 +8,13 @@
 		"flamework-template:out/client/controllers/Template_Controller@Test_Controller": "client/controllers/Template_Controller@Test_Controller",
 		"flamework-template:out/client/controllers/Template_Controller@Template_Controller": "client/controllers/Template_Controller@Template_Controller",
 		"flamework-template:out/server/services/Template_Service@Test_Service": "server/services/Template_Service@Test_Service",
-		"flamework-template:out/server/services/Template_Service@Template_Service": "server/services/Template_Service@Template_Service"
+		"flamework-template:out/server/services/Template_Service@Template_Service": "server/services/Template_Service@Template_Service",
+		"custom-character-replication:out/client/controllers/UI_Controller@UI_Controller": "client/controllers/UI_Controller@UI_Controller",
+		"custom-character-replication:out/shared/utils/Throttler@Throttler": "shared/utils/Throttler@Throttler",
+		"custom-character-replication:out/client/controllers/Character_Replication/Replication_Controller@Replication_Controller": "client/controllers/Character_Replication/Replication_Controller@Replication_Controller",
+		"custom-character-replication:out/server/services/Character_Replication/Replication_Service@Replication_Service": "server/services/Character_Replication/Replication_Service@Replication_Service",
+		"custom-character-replication:out/client/controllers/Character_Replication/Interpolation_Controller@Interpolation_Controller": "client/controllers/Character_Replication/Interpolation_Controller@Interpolation_Controller",
+		"custom-character-replication:out/client/controllers/test@test": "client/controllers/test@test"
 	},
 	"metadata": {
 		"config": {

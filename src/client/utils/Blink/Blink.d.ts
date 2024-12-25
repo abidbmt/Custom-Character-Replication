@@ -6,8 +6,8 @@ export declare const ReadyPacket: {
 	Fire: (Value: void) => void
 }
 export declare const ClientToServer: {
-	Fire: (Value: { position: Vector3, rotation: Vector3 }) => void
+	Fire: (Value: { cframe: CFrame }) => void
 }
 export declare const ServerToClient: {
-	On: (Listener: (Value: { player: Player, position: Vector3, rotation: Vector3 }) => void) => (() => void)
+	On: (Listener: (Value: { player: Player, cframe: CFrame }) => void) => (() => void)
 }
