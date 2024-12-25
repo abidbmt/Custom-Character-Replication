@@ -2,8 +2,29 @@ option ClientOutput = "src/client/utils/Blink/Blink.luau"
 option ServerOutput = "src/server/utils/Blink/Blink.luau"
 option Typescript = true
 
-event Test {
+event ReadyPacket {
+    from: Client,
+    type: Reliable,
+    call: ManyAsync,
+}
+
+event ClientToServer {
+    from: Client,
+    type: Reliable,
+    call: ManyAsync,
+	data: struct {
+		position: vector<f64>,
+		rotation: vector<f64>,
+	}
+}
+
+event ServerToClient {
     from: Server,
     type: Reliable,
-    call: ManyAsync
+    call: ManyAsync,
+	data: struct {
+		player: Instance(Player),
+		position: vector<f64>,
+		rotation: vector<f64>,
+	}
 }

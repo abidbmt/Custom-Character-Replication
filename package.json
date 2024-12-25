@@ -1,5 +1,5 @@
 {
-	"name": "flamework-template",
+	"name": "custom-character-replication",
 	"version": "0.1.0",
 	"main": "index.js",
 	"scripts": {
