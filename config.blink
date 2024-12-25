@@ -1,0 +1,9 @@
+option ClientOutput = "src/client/utils/Blink/Blink.luau"
+option ServerOutput = "src/server/utils/Blink/Blink.luau"
+option Typescript = true
+
+event Test {
+    from: Server,
+    type: Reliable,
+    call: ManyAsync
+}

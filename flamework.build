@@ -1,0 +1,20 @@
+{
+	"version": 1,
+	"flameworkVersion": "1.2.3",
+	"identifiers": {
+		"flamework-template:out/server/services/Test_Service@Test_Service": "server/services/Test_Service@Test_Service",
+		"flamework-template:out/client/controllers/Test_Controller@Test_Controller": "client/controllers/Test_Controller@Test_Controller",
+		"flamework-template:out/client/controllers/UI_Controller@UI_Controller": "client/controllers/UI_Controller@UI_Controller",
+		"flamework-template:out/client/controllers/Template_Controller@Test_Controller": "client/controllers/Template_Controller@Test_Controller",
+		"flamework-template:out/client/controllers/Template_Controller@Template_Controller": "client/controllers/Template_Controller@Template_Controller",
+		"flamework-template:out/server/services/Template_Service@Test_Service": "server/services/Template_Service@Test_Service",
+		"flamework-template:out/server/services/Template_Service@Template_Service": "server/services/Template_Service@Template_Service"
+	},
+	"metadata": {
+		"config": {
+			"profiling": true,
+			"logLevel": "verbose",
+			"disableDependencyWarnings": false
+		}
+	}
+}

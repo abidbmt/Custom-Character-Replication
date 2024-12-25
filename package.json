@@ -1,0 +1,39 @@
+{
+	"name": "flamework-template",
+	"version": "0.1.0",
+	"main": "index.js",
+	"scripts": {
+		"build": "rbxtsc",
+		"watch": "rbxtsc -w"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "MPL-2.0",
+	"type": "commonjs",
+	"description": "",
+	"devDependencies": {
+		"@rbxts/compiler-types": "^3.0.0-types.0",
+		"@rbxts/types": "^1.0.813",
+		"@typescript-eslint/eslint-plugin": "^8.18.1",
+		"@typescript-eslint/parser": "^8.18.1",
+		"eslint": "^8.57.1",
+		"eslint-plugin-roblox-ts": "^0.0.36",
+		"rbxts-transform-print": "^0.1.1",
+		"rbxts-transformer-flamework": "^1.2.3",
+		"roblox-ts": "^3.0.0",
+		"typescript": "^5.5.3"
+	},
+	"dependencies": {
+		"@flamework/components": "^1.2.3",
+		"@flamework/core": "^1.2.3",
+		"@rbxts/charm": "^0.8.1",
+		"@rbxts/document-service": "^1.1.3-ts.1",
+		"@rbxts/fastcast": "^13.2.0-ts.2",
+		"@rbxts/lemon-signal": "^1.2.0",
+		"@rbxts/object-cache": "^1.4.5",
+		"@rbxts/raycast-hitbox": "^4.0.1-ts.1",
+		"@rbxts/ui-labs": "^2.3.1",
+		"@rbxts/vide": "^0.5.2",
+		"@rbxts/vide-charm": "^0.1.1"
+	}
+}

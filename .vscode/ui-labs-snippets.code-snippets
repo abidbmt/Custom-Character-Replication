@@ -1,0 +1,23 @@
+{
+	"UI Labs Story": {
+		"prefix":[ "story", "uilabsstory"],
+		"description": "Create a UI Labs story",
+		"body": [
+			"import Vide from \"@rbxts/vide\"",
+			"import { CreateVideStory } from \"@rbxts/ui-labs\"",
+			"",
+			"const controls = {}",
+			"",
+			"const story = CreateVideStory({",
+				"\tvide: Vide,",
+				"\tcontrols: controls,",
+			"}, (props) => {",
+				"\treturn (",
+				"\t\t$0",
+				"\t)",
+			"})",
+			"",
+			"export = story"
+		]
+	}
+}

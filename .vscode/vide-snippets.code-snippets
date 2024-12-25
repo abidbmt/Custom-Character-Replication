@@ -1,0 +1,42 @@
+{
+	"Vide App": {
+		"prefix":[ "app", "videapp"],
+		"description": "Create a Vide app",
+		"body": [
+			"import Vide, {  } from \"@rbxts/vide\"",
+			"import {  } from \"@rbxts/services\"",
+			"import {  } from \"rbxts-transform-print\"",
+			"",
+			"interface ${TM_FILENAME_BASE}Props {}",
+			"",
+			"export function ${TM_FILENAME_BASE}({}: ${TM_FILENAME_BASE}Props) {",
+				"\t// Code here",
+				"\t",
+				"\treturn (",
+					"\t\t<screengui Name={\"${TM_FILENAME_BASE}\"} IgnoreGuiInset={${1:true}}>",
+					"\t\t\t$0",
+					"\t\t</screengui>",
+				"\t)",
+			"}",
+		]
+	},
+	"Vide Component": {
+		"prefix":[ "component", "videcomponent"],
+		"description": "Create a Vide component",
+		"body": [
+			"import Vide, {  } from \"@rbxts/vide\"",
+			"import {  } from \"@rbxts/services\"",
+			"import {  } from \"rbxts-transform-print\"",
+			"",
+			"interface ${TM_FILENAME_BASE}Props {}",
+			"",
+			"export function ${TM_FILENAME_BASE}({}: ${TM_FILENAME_BASE}Props) {",
+				"\t// Code here",
+				"\t",
+				"\treturn (",
+					"\t\t$0",
+				"\t)",
+			"}",
+		]
+	},
+}
