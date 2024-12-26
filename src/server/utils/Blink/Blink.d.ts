@@ -6,11 +6,11 @@ export declare const ReadyPacket: {
 	On: (Listener: (Player: Player, Value: void) => void) => (() => void)
 }
 export declare const ClientToServer: {
-	On: (Listener: (Player: Player, Value: { cframe: CFrame }) => void) => (() => void)
+	On: (Listener: (Player: Player, Value: { cframe: CFrame, deltaTime: number }) => void) => (() => void)
 }
 export declare const ServerToClient: {
-	Fire: (Player: Player, Value: { player: Player, cframe: CFrame }) => void
-	FireAll: (Value: { player: Player, cframe: CFrame }) => void
-	FireExcept: (Except: Player, Value: { player: Player, cframe: CFrame }) => void
-	FireList: (List: Player[], Value: { player: Player, cframe: CFrame }) => void
+	Fire: (Player: Player, Value: { player: Player, cframe: CFrame, deltaTime: number }) => void
+	FireAll: (Value: { player: Player, cframe: CFrame, deltaTime: number }) => void
+	FireExcept: (Except: Player, Value: { player: Player, cframe: CFrame, deltaTime: number }) => void
+	FireList: (List: Player[], Value: { player: Player, cframe: CFrame, deltaTime: number }) => void
 }
