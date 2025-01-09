@@ -24,6 +24,10 @@ export class Replication_Service implements OnStart, OnInit {
 		})
 
 		ClientToServer.On((player, {cframe, deltaTime}) => {
+			// // Packet loss simulation
+			// if (math.random() > 0.5) {
+			// 	ServerToClient.FireExcept(player, {player, cframe, deltaTime})
+			// }
 			ServerToClient.FireExcept(player, {player, cframe, deltaTime})
 			// ServerToClient.FireAll({player, cframe, deltaTime})
 			this.sendRates.set(player, (this.sendRates.get(player) ?? 0) + 1)

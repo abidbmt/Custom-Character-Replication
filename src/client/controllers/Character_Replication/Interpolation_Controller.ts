@@ -28,7 +28,7 @@ export class Interpolation_Controller implements OnStart, OnInit {
 				this.startTimes.set(player, os.clock())
 			}
 
-			const INTERPOLATION_DELAY = math.max(SEND_INTERVAL, deltaTime) * 4
+			const INTERPOLATION_DELAY = math.max(SEND_INTERVAL, deltaTime) * 3 + deltaTime * 3
 
 			let snapshotBuffer = this.snapshotBuffers.get(player)
 			if (snapshotBuffer === undefined) {
@@ -41,7 +41,7 @@ export class Interpolation_Controller implements OnStart, OnInit {
 
 			const now = os.clock()
 			for (let i = snapshotBuffer.size(); i >= 1; i--) {
-				if (now - snapshotBuffer[i - 1].timeRecieved > INTERPOLATION_DELAY * 3) {
+				if (now - snapshotBuffer[i - 1].timeRecieved > INTERPOLATION_DELAY * 2) {
 					snapshotBuffer.remove(i)
 				}
 			}
@@ -53,10 +53,15 @@ export class Interpolation_Controller implements OnStart, OnInit {
 
 		RunService.BindToRenderStep("interpolation", 0, (deltaTime) => {
 			for (const [player, snapshotBuffer] of this.snapshotBuffers) {
+				if (snapshotBuffer.size() < 2) {
+					$warn("Too few snapshots")
+					continue
+				}
+
 				let olderSnapshot = undefined
 				let newerSnapshot = undefined
 
-				const INTERPOLATION_DELAY = math.max(SEND_INTERVAL, snapshotBuffer[1 - 1].deltaTime) * 4
+				const INTERPOLATION_DELAY = math.max(SEND_INTERVAL, snapshotBuffer[1 - 1].deltaTime) * 3 + snapshotBuffer[1 - 1].deltaTime * 3
 
 				const now = os.clock()
 				let renderTime = now - INTERPOLATION_DELAY
